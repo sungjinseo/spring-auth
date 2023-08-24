@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active:
+      - local
+    group:
+      local:
+        - db-local
+        - key-local
+        - security-local
+      dev:
+        - db-dev
+        - key-dev
+        - security-dev
+    include:
+      - db
+      - key
+      - security
+  output:
+    ansi:
+      enabled: always
